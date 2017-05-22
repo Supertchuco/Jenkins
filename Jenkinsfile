@@ -18,5 +18,5 @@ node {
 
 stage 'Build Image'
 node {
-    sh './dockerBuild -t'
+    sh './docker build .'
 }
