@@ -14,9 +14,9 @@ node {
 
 }
 
-stage 'test'
-node {
-    sh './gradlew clean test'
 
-    step([$class: 'JUnitResultArchiver', testResults: '**/build/test-results/TEST-*.xml'])
+
+stage 'Build Image'
+node {
+    sh './dockerBuild.sh'
 }
