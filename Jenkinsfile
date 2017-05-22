@@ -7,6 +7,7 @@ node {
     git 'https://github.com/Supertchuco/otto-rest.git'
 
     echo "Buildando"
+	sh 'chmod +x gradlew'
     sh './gradlew build -x test'
 
     archive 'build/libs/*.jar'
