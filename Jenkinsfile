@@ -13,7 +13,7 @@ node {
     }
 
     stage('generating docker image') {
-    	sh 'docker build -t  ./otto-rest/.'
+    	sh 'docker build .'
     }
 
     stage('pushing docker image to DTR'){
