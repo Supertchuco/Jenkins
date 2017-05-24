@@ -47,9 +47,8 @@ node {
     stage('pushing docker image to Docker Hub'){
   	   echo 'publish docker hub'
   	}
-    }
 
     stage('notification') {
-	echo 'Notification TBD'
+	     echo 'Notification TBD'
     }
 }
