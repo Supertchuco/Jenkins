@@ -7,9 +7,8 @@ node {
 
       echo "Buildando"
       sh 'chmod +x gradlew'
-      sh './gradlew build -x test'
+      sh './gradlew clean build buildDocker'
 
-      archive 'build/libs/*.jar'
     }
 
     stage('generating docker image') {
