@@ -7,12 +7,12 @@ node {
 
       echo "Buildando"
       sh 'chmod +x gradlew'
-      sh './gradlew clean build buildDocker'
+      sh 'sudo ./gradlew clean build buildDocker'
 
     }
 
     stage('generating docker image') {
-    	sh 'sudo docker build .'
+    	echo "sh sudo docker build ."
     }
 
     stage('pushing docker image to DTR'){
